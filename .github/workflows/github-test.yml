@@ -2,7 +2,7 @@ name: Github linter
 
 on:
   push:
-    branches: ["master"]
+    branches: ['master']
 
   workflow_dispatch:
 
@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run super-linter
-        uses: github/super-linter@v3
+        uses: github/super-linter@v5
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
